@@ -1,0 +1,2 @@
+class DefaultTimersController < ApplicationController
+end

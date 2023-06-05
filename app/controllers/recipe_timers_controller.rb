@@ -1,0 +1,2 @@
+class RecipeTimersController < ApplicationController
+end
