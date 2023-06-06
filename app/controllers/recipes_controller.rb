@@ -1,10 +1,14 @@
 class RecipesController < ApplicationController
-  def index
+  def show
     @recipes = Recipe.all
+    @recipe = Recipe.find(params[:id])
+    @new_recipe = Recipe.new
   end
 
-  def new
-    @recipe = Recipe.new
+  # def new
+  #   @recipe = Recipe.new
+  # end
+  def index
   end
 
   def edit
@@ -12,19 +16,24 @@ class RecipesController < ApplicationController
   end
 
   def destroy
-    @recipe = find(params[:id])
+    @recipe = Recipe.find(params[:id])
     @recipe.destroy
-    @recipe.save
+    redirect_to recipes_path, status: :see_other
   end
 
   def create
     @recipe = Recipe.new(recipe_params)
-    @recipe.save
+    @recipe.user = current_user
+    if @recipe.save
+      redirect_to recipe_path(@recipe)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   # private
 
-  # def recipe_params
-  #   params.require(:recipe).permit(:ingredient, :time)
-  # end
+  def recipe_params
+    params.require(:recipe).permit(:name)
+  end
 end
