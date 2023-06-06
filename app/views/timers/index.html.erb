@@ -1,0 +1,16 @@
+<h1>Timers</h1>
+<div class="search">
+    <%= form_with url: timers_path, method: :get, class: "d-flex" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a timer"
+  %>
+ <div class="search-btn m-auto"><%= submit_tag "Search", class: "btn btn-primary" %></div>
+<% end %>
+</div>
+
+ <% @timers.each do |timer| %>
+ <h2><%= timer.ingredient%></h2>
+  <h2><%= timer.time%></h2>
+<% end %>
