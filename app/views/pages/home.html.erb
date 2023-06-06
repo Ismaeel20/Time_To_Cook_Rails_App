@@ -1,2 +1,14 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+<h1>Hello MasterChef , welcome to your TimeToCook app!</h1>
+ <div class="controls">
+      <input type="text" id="inputHours" placeholder="HH" maxlength="2">
+      <input type="text" id="inputMinutes" placeholder="MM" maxlength="2">
+      <input type="text" id="inputSeconds" placeholder="SS" maxlength="2">
+      <button class="btn" onclick="setTimer()">Set Timer</button>
+      <button class="btn" onclick="startTimer()">Start</button>
+      <button class="btn" onclick="pauseTimer()">Pause</button>
+      <button class="btn" onclick="resetTimer()">Reset</button>
+    </div>
+  <%# </div> %>
+<%# Timer logic %>
+  </div>
