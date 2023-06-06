@@ -1,10 +1,18 @@
 class TimersController < ApplicationController
   def index
-    @timers = Timer.all
+    # @timers = Timer.all
+    @timer = Timer.new
 
     if params[:query].present?
-      sql_query = "ingredient ILIKE :query OR time ILIKE :query"
+      if params[:query].match(/\d/)
+        sql_query = "time = :query"
+        @timers = Timer.where(sql_query, query: params[:query].to_f)
+      else
+      # @timers = Timer.where(sql_query, query: "%#{params[:query]}%")
+      # sql_query = "ingredient ILIKE ?"
+      sql_query = "ingredient ILIKE :query"
       @timers = Timer.where(sql_query, query: "%#{params[:query]}%")
+      end
     else
       @timers = Timer.all
     end
@@ -14,9 +22,9 @@ class TimersController < ApplicationController
     @timer = Timer.find(params[:id])
   end
 
-  def new
-    @timer = Timer.new
-  end
+  # def new
+  #   @timer = Timer.new
+  # end
 
   def create
     @timer = Timer.new(timer_params)
@@ -39,11 +47,10 @@ class TimersController < ApplicationController
       render 'edit', status: :unprocessable_entity
     end
   end
+end
 
-  end
+# private
 
-  # private
-
-  # def timer_params
-  #   params.require(:timer).permit(:ingredient, :time)
-  # end
+# def timer_params
+#   params.require(:timer).permit(:ingredient, :time)
+# end
