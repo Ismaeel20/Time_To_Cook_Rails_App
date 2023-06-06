@@ -10,7 +10,17 @@
 <% end %>
 </div>
 
+<div>
  <% @timers.each do |timer| %>
- <h2><%= timer.ingredient%></h2>
-  <h2><%= timer.time%></h2>
+ <ul><%= timer.ingredient %>
+ <%= timer.time %>
+     <%= link_to "delete", timer_path(timer), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+     <%= link_to "edit" %>
+ </ul>
 <% end %>
+<%= simple_form_for @timer do |f| %>
+<%= f.input :ingredient %>
+<%= f.input :time %>
+  <%= f.submit %>
+  <% end %>
+</div>
