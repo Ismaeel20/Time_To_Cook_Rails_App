@@ -8,6 +8,7 @@ class TimersController < ApplicationController
     else
       @timers = Timer.all
     end
+  end
 
   def edit
     @timer = Timer.find(params[:id])
@@ -46,4 +47,3 @@ class TimersController < ApplicationController
   # def timer_params
   #   params.require(:timer).permit(:ingredient, :time)
   # end
-end
