@@ -10,5 +10,4 @@ class Timer < ApplicationRecord
   using: {
     tsearch: { prefix: true }
   }
-
 end
