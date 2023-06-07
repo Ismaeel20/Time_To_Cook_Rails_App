@@ -2,8 +2,15 @@
   <h1>Recipes</h1>
   <ul><% @recipes.each do |recipe|%>
         <li>
-            <%= recipe.name %>
-            <%= link_to "delete", recipe_path(@recipe), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+            <% if recipe.id == @recipe.id %>
+             <strong><%= link_to recipe.name, recipe_path(recipe) %></strong>
+            <% else %>
+              <%= link_to recipe.name, recipe_path(recipe) %>
+            <% end %>
+
+            <% unless recipe.id == @recipe.id%>
+              <%= link_to "delete", recipe_path(recipe), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+            <% end %>
             <%= link_to "edit" %>
         </li>
       <% end %>
