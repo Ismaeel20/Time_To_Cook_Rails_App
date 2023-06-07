@@ -1,5 +1,5 @@
 class RecipeTimer < ApplicationRecord
-  belongs_to :recipe, dependent: :destroy
+  belongs_to :recipe
 
   validates :ingredient, :time, presence: true
   validates :time, numericality: { greater_than: 0 }

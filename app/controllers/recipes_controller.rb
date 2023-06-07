@@ -35,9 +35,18 @@ class RecipesController < ApplicationController
     end
   end
 
-  # private
+  def update
+    @recipe = Recipe.find(params[:id])
+    if @recipe.update(recipe_params)
+      redirect_to recipe_path(@recipe)
+    else
+      render 'edit', status: :unprocessable_entity
+    end
+  end
+
+  private
 
   def recipe_params
-    params.require(:recipe).permit(:name)
+    params.require(:recipe).permit(:name, :instructions)
   end
 end

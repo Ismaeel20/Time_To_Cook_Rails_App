@@ -33,7 +33,9 @@
               <%= timer.time %>
           </div>
         </div>
+     <%= link_to "edit", edit_recipe_timer_path(timer) %>
       <% end %>
+
 
       <%= simple_form_for [ @recipe, @new_timer ] do |f|  %>
           <%= f.input :ingredient %>
@@ -42,3 +44,4 @@
       <% end %>
     </div>
   </div>
+
