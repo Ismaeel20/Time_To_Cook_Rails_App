@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :recipe_timers, only: [:create]
   end
 
-  resources :recipe_timers, only: [:edit, :update]
+  resources :recipe_timers, only: [:edit, :update, :destroy]
   resources :timers, only: [:index, :destroy, :create, :edit, :update]
 
   # Defines the root path route ("/")
