@@ -5,7 +5,7 @@
         <li>
             <%= link_to recipe.name, recipe_path(recipe) %>
             <%= link_to "delete", recipe_path(recipe), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-            <%= link_to "edit" %>
+                 <%= link_to "edit", edit_recipe_path(recipe) %>
         </li>
       <% end %>
   </ul>
