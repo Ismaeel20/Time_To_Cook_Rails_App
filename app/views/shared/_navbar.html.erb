@@ -3,6 +3,7 @@
 
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "Time to cook (1).png" %>
+
     <% end %>
 
     <div class="d-flex w-4 justify-content-between" style="width: 500px;">
@@ -21,7 +22,7 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "Home", root_path, class: "nav-link" %>
+
 
           </li>
           <li class="nav-item">
