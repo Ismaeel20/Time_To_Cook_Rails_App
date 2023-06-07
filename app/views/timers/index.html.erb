@@ -10,7 +10,7 @@
 <% end %>
 </div>
 
-<div>
+<div data-controller="timers" >
  <% @timers.each do |timer| %>
  <ul><%= timer.ingredient %>
  <% if timer.user_id == current_user.id %>
