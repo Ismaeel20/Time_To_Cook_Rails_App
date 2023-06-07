@@ -3,3 +3,8 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import "@popperjs/core"
 import "bootstrap"
+
+
+
+// import { Application } from "stimulus"
+// window.Stimulus = Application.start();
