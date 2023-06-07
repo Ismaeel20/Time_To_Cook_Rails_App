@@ -1,15 +1,16 @@
 class RecipesController < ApplicationController
   def show
-    @recipes = Recipe.all
+    @recipes = Recipe.where(user: current_user)
     @recipe = Recipe.find(params[:id])
     @new_recipe = Recipe.new
+    @new_timer = RecipeTimer.new
   end
 
   # def new
   #   @recipe = Recipe.new
   # end
   def index
-    @recipes = Recipe.all
+    @recipes = Recipe.where(user: current_user)
     @new_recipe = Recipe.new
   end
 

@@ -1,3 +1,4 @@
+<div class="d-flex">
 <div>
   <h1>Recipes</h1>
   <ul><% @recipes.each do |recipe|%>
@@ -11,7 +12,7 @@
             <% unless recipe.id == @recipe.id%>
               <%= link_to "delete", recipe_path(recipe), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
             <% end %>
-            <%= link_to "edit" %>
+            <%= link_to "edit", edit_recipe_path(recipe) %>
         </li>
       <% end %>
   </ul>
@@ -20,4 +21,21 @@
   <%= f.input :name %>
   <%= f.submit %>
   <% end %>
+</div>
+
+<div>
+<h1>Your Recipe Timers</h1>
+<% @recipe.recipe_timers.each do |timer| %>
+<%= timer.time %>
+<%= timer.ingredient %>
+<% end %>
+
+<%= simple_form_for [ @recipe, @new_timer ] do |f|  %>
+  <%= f.input :ingredient %>
+  <%= f.input :time %>
+  <%= f.submit %>
+  <% end %>
+
+
+</div>
 </div>
