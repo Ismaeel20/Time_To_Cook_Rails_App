@@ -3,7 +3,7 @@
   <h1>Recipes</h1>
   <ul><% @recipes.each do |recipe|%>
         <li>
-            <% if recipe.id == @recipe.id %>
+            <% if recipe.user_id == @recipe.id %>
              <strong><%= link_to recipe.name, recipe_path(recipe) %></strong>
             <% else %>
               <%= link_to recipe.name, recipe_path(recipe) %>
