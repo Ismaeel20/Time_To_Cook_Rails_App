@@ -25,7 +25,7 @@ class RecipeTimersController < ApplicationController
   def destroy
     @recipe_timer = RecipeTimer.find(params[:id])
     @recipe_timer.destroy
-    redirect_to recipe_timers_path, status: :see_other
+    redirect_to recipe_timer_path, status: :see_other
   end
 
   def update

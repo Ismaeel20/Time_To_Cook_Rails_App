@@ -28,6 +28,7 @@
 <% @recipe.recipe_timers.each do |timer| %>
   <%= timer.time %>
   <%= timer.ingredient %>
+  <%= link_to "delete", recipe_timer_path(timer), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
   <%= link_to "edit", edit_recipe_timer_path(timer) %>
 <% end %>
 
