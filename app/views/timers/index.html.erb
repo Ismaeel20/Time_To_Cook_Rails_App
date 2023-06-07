@@ -13,9 +13,10 @@
 <div>
  <% @timers.each do |timer| %>
  <ul><%= timer.ingredient %>
- <%= timer.time %>
+ <% if timer.user_id == current_user.id %>
      <%= link_to "delete", timer_path(timer), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
      <%= link_to "edit" %>
+ <% end %>
  </ul>
 <% end %>
 <%= simple_form_for @timer do |f| %>

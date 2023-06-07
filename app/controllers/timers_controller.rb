@@ -28,7 +28,7 @@ class TimersController < ApplicationController
 
   def create
     @timer = Timer.new(timer_params)
-    @timer.user = current_user
+    @timer.user_id = current_user.id
     @timer.save
     redirect_to timer_path(@timer)
   end
@@ -49,8 +49,8 @@ class TimersController < ApplicationController
   end
 end
 
-# private
+private
 
-# def timer_params
-#   params.require(:timer).permit(:ingredient, :time)
-# end
+def timer_params
+  params.require(:timer).permit(:ingredient, :time)
+end
