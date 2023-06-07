@@ -14,7 +14,7 @@ class TimersController < ApplicationController
       @timers = Timer.where(sql_query, query: "%#{params[:query]}%")
       end
     else
-      @timers = Timer.all
+      @timers = Timer.where(user_id: current_user).or(Timer.where(user_id: nil))
     end
   end
 
@@ -42,7 +42,7 @@ class TimersController < ApplicationController
   def update
     @timer = Timer.find(params[:id])
     if @timer.update(timer_params)
-      redirect_to timer_path(@timer)
+      redirect_to timers_path
     else
       render 'edit', status: :unprocessable_entity
     end
