@@ -22,20 +22,23 @@
   <%= f.submit %>
   <% end %>
 </div>
+  <div class="container">
+    <div>
+      <h1>Your Recipe Timers</h1>
+      <% @recipe.recipe_timers.each do |timer| %>
+        <div class="ingredient-circle">
+          <%= timer.ingredient %>
+        </div>
+        <div class="timer-circle">
+              <%= timer.time %>
+          </div>
+        </div>
+      <% end %>
 
-<div>
-<h1>Your Recipe Timers</h1>
-<% @recipe.recipe_timers.each do |timer| %>
-<%= timer.time %>
-<%= timer.ingredient %>
-<% end %>
-
-<%= simple_form_for [ @recipe, @new_timer ] do |f|  %>
-  <%= f.input :ingredient %>
-  <%= f.input :time %>
-  <%= f.submit %>
-  <% end %>
-
-
-</div>
-</div>
+      <%= simple_form_for [ @recipe, @new_timer ] do |f|  %>
+          <%= f.input :ingredient %>
+          <%= f.input :time %>
+          <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
