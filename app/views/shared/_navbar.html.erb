@@ -1,14 +1,19 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
+
+    <%= link_to root_path, class: "navbar-brand" do %>
+      <%= image_tag "Time to cook (1).png" %>
+=======
     <%= link_to "#", class: "navbar-brand" do %>
       <%= image_tag "Time to cook (1).png" %>
        <%= image_tag "https://cdn.icon-icons.com/icons2/2248/PNG/512/home_circle_icon_137496.png" %>
        <%= image_tag "https://freeiconshop.com/wp-content/uploads/edd/settings-solid.png" , class: "settings" %>
+
     <% end %>
 
     <div class="d-flex w-4 justify-content-between" style="width: 500px;">
       <%= link_to "Default Timers", "timers" %>
-      <%= link_to "Your Timers", "#" %>
+      <%= link_to "Your Timers", "recipes" %>
       <%= link_to "Recipes", "#" %>
     </div>
 
@@ -17,13 +22,17 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <%= image_tag "https://cdn.icon-icons.com/icons2/2248/PNG/512/home_circle_icon_137496.png" %>
+       <%= image_tag "https://freeiconshop.com/wp-content/uploads/edd/settings-solid.png" , class: "settings" %>
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
+
+=======
             <%= link_to "Home", root_path, class: "nav-link" %>
+
           </li>
           <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
           <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
