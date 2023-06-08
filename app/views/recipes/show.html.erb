@@ -34,7 +34,7 @@
           <%= link_to "delete", recipe_timer_path(timer), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
           <%= link_to "edit", edit_recipe_timer_path(timer) %>
         </div>
-     <%= link_to "edit", edit_recipe_timer_path(timer) %>
+
       <% end %>
 
 
@@ -44,12 +44,6 @@
           <%= f.submit %>
       <% end %>
     </div>
-
-    <%= simple_form_for [ @recipe, @new_timer ] do |f|  %>
-      <%= f.input :ingredient %>
-      <%= f.input :time %>
-      <%= f.submit %>
-    <% end %>
 
   </div>
 </div>
