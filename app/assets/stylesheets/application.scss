@@ -33,44 +33,80 @@ a {
  }
 
 
-#recipe-delete {
-  border-color: black;
-  color: black;
-}
 
-#recipe-delete:hover {
+ // body {
+   //   padding: 25px;
+   //   background-color: white;
+   //   color: black;
+  //   font-size: 25px;
+  // }
 
-  color: blue;
+  // .dark-mode {
+    //   background-color: black;
+    //   color: white;
+    // }
+    a {
+      border-style: solid;
+      border-radius: 300px;
+      border-color: aliceblue;
+      color: aliceblue;
+      padding: -0.5rem 1rem;
+      text-decoration: none;
 
-  // background-color: red;
-}
-// body {
-//   padding: 25px;
-//   background-color: white;
-//   color: black;
-//   font-size: 25px;
-// }
+    }
+    .edit-delete{
+      border-color: black;
+      color:black;
+      padding-inline: 11px;
+    }
 
-// .dark-mode {
-//   background-color: black;
-//   color: white;
-// }
- a {
-  border-style: solid;
-  border-radius: 300px;
-  border-color: aliceblue;
-  color: aliceblue;
-  padding: -0.5rem 1rem;
-  text-decoration: none;
+    .recipe-delete:hover {
 
-}
-#edit-delete{
-border-color: black;
-color:black;
-}
-#recipe-delete:hover {
+      color:blue;
+      border-color: blue;
 
-  color: black;
+      // background-color: red;
+    }
+    .edit-delete:hover {
 
-  // background-color: red;
-}
+      color: blue;
+      border-color: blue;
+
+      // background-color: red;
+    }
+    .recipe-delete{
+      border-color: black;
+      color:black;
+      padding-inline: 11px;
+    }
+    // .left-recipe-delete {
+    //   border-color: black;
+    //   color: black;
+    //   padding-inline: 10px;
+    // }
+
+    // .left-edit-delete{
+    //   border-color: black;
+    //   color:black;
+    //   padding-inline: 11px;
+    // }
+
+    // .left-recipe-delete:hover {
+
+    //   color:blue;
+    //   border-color: blue;
+
+    //   // background-color: red;
+    // }
+    // .left-edit-delete:hover {
+
+    //   color: blue;
+    //   border-color: blue;
+
+    //   // background-color: red;
+    // }
+    // .left-recipe-delete {
+    //   border-color: black;
+    //   color: black;
+    //   padding-inline: 10px;
+    // }
