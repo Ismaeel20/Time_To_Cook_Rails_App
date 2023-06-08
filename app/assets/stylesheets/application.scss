@@ -28,10 +28,22 @@ body {
   color: antiquewhite;
 }
 
-// a {
-//   color: rgb(216, 250, 239);
-// }
+a {
+   color: black;
+ }
 
+
+#recipe-delete {
+  border-color: black;
+  color: black;
+}
+
+#recipe-delete:hover {
+
+  color: blue;
+
+  // background-color: red;
+}
 // body {
 //   padding: 25px;
 //   background-color: white;
@@ -51,4 +63,14 @@ body {
   padding: -0.5rem 1rem;
   text-decoration: none;
 
+}
+#edit-delete{
+border-color: black;
+color:black;
+}
+#recipe-delete:hover {
+
+  color: black;
+
+  // background-color: red;
 }

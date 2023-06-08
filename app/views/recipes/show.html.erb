@@ -31,19 +31,21 @@
         <div class="timer-circle">
           <strong><%= timer.ingredient %></strong>
           <%= timer.time %>
-          <%= link_to "delete", recipe_timer_path(timer), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-          <%= link_to "edit", edit_recipe_timer_path(timer) %>
+          <a  id="recipe-delete" <%= link_to "delete", recipe_timer_path(timer), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>>
+          <a id="edit-delete" <%= link_to "edit", edit_recipe_timer_path(timer) %>>
         </div>
 
       <% end %>
 
 
-      <%= simple_form_for [ @recipe, @new_timer ] do |f|  %>
-          <%= f.input :ingredient %>
-          <%= f.input :time %>
-          <%= f.submit %>
-      <% end %>
-    </div>
 
+    </div>
+    <div class="create">
+    <%= simple_form_for [ @recipe, @new_timer ] do |f|  %>
+        <%= f.input :ingredient %>
+        <%= f.input :time %>
+        <%= f.submit %>
+    <% end %>
+    <div>
   </div>
 </div>
