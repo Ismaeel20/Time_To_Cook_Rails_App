@@ -9,21 +9,24 @@
  <div class="search-btn m-auto"><%= submit_tag "Search", class: "btn btn-primary" %></div>
 <% end %>
 </div>
-
+<div class="container">
 <div data-controller="timers" >
+  <div class="timer-grid">
  <% @timers.each do |timer| %>
+  <div class="timer-circle">
  <ul><%= timer.ingredient %>
+ <%= timer.time %>
  <% if timer.user_id == current_user.id %>
-     <%= link_to "delete", timer_path(timer), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-     <%= link_to "edit", edit_timer_path(timer) %>
+    <a  id="recipe-delete"  <%= link_to "delete", timer_path(timer), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>>
+     <a id="edit-delete"  <%= link_to "edit", edit_timer_path(timer) %>>
  <% end %>
  </ul>
+</div>
 <% end %>
+</div>
 <%= simple_form_for @timer do |f| %>
 <%= f.input :ingredient %>
 <%= f.input :time %>
   <%= f.submit %>
   <% end %>
-
-
 </div>
