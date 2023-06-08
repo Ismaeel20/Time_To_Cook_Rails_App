@@ -8,12 +8,52 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 35px;
+  width: 75px;
 }
 img{
   vertical-align: middle;
     width: 35px;
 }
 img.avatar{
-  width:35px;
+  width:45px;
+}
+
+
+.nav-bar-links{
+  display:inline-block;
+  backface-visibility: hidden;
+  vertical-align: middle;
+  position:relative;
+  a {
+    color: black;
+  }
+  box-shadow: 0 0 1px rgba(0,0,0,0);
+  transform: translateZ(0);
+  transition-duration: .3s;
+  transition-property:transform;
+}
+
+.nav-bar-links:before{
+  position:absolute;
+  pointer-events: none;
+  z-index:-1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height:10px;
+  width:90%;
+  opacity:0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(19, 0, 66, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+  background: radial-gradient(ellipse at center, rgba(12, 1, 44, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+  /* W3C */
+  transition-duration: 0.3s;
+  transition-property: transform, opacity;
+}
+
+.nav-bar-links:hover, .hoverable:active, .hoverable:focus{
+  transform: translateY(-5px);
+}
+.nav-bar-links:hover:before, .hoverable:active:before, .hoverable:focus:before{
+  opacity: 1;
+  transform: translateY(-5px);
 }

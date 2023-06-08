@@ -30,7 +30,7 @@ class TimersController < ApplicationController
     @timer = Timer.new(timer_params)
     @timer.user_id = current_user.id
     @timer.save
-    redirect_to timer_path(@timer)
+    redirect_to timers_path(@timer)
   end
 
   def destroy
