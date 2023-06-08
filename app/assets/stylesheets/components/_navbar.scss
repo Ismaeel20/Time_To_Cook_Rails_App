@@ -24,6 +24,9 @@ img.avatar{
   backface-visibility: hidden;
   vertical-align: middle;
   position:relative;
+  a {
+    color: black;
+  }
   box-shadow: 0 0 1px rgba(0,0,0,0);
   transform: translateZ(0);
   transition-duration: .3s;
