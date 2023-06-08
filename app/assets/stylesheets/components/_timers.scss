@@ -7,23 +7,28 @@
         border: 3px solid #000;
         color: #000;
         text-align: center;
-        font: 32px Arial, sans-serif;
+        // font: 32px Arial, sans-serif;
 
 }
 
-.outer-timer {
-  background-color: #b4b0b0;
-  width: 180px;
-  height: 180px;
-  border-radius: 50% ;
-}
+// .outer-timer {
+//   background-color: #b4b0b0;
+//   width: 180px;
+//   height: 180px;
+//   border-radius: 50% ;
+// }
 
 .timer-circle{
-  width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: white;
-    border: 16px solid gray;
-    padding: 39px;
-    margin-top: 18px;
+  width: 197px;
+  height: 181px;
+  border-radius: 50%;
+  background-color: white;
+  border: 16px solid gray;
+  padding-top: 58px;
+  margin-inline: -20px;
+}
+.timer-grid{
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
