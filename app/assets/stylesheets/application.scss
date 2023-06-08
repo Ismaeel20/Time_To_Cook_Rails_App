@@ -12,4 +12,65 @@
 @import "pages/index";
 .container{
   margin: 20px auto;
+  text-align: center;
+}
+
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('background-cook.jpg');
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  height: 90vh;
+  color: antiquewhite;
+}
+
+.btn {
+  color: antiquewhite;
+}
+
+a {
+   color: black;
+ }
+
+
+#recipe-delete {
+  border-color: black;
+  color: black;
+}
+
+#recipe-delete:hover {
+
+  color: blue;
+
+  // background-color: red;
+}
+// body {
+//   padding: 25px;
+//   background-color: white;
+//   color: black;
+//   font-size: 25px;
+// }
+
+// .dark-mode {
+//   background-color: black;
+//   color: white;
+// }
+ a {
+  border-style: solid;
+  border-radius: 300px;
+  border-color: aliceblue;
+  color: aliceblue;
+  padding: -0.5rem 1rem;
+  text-decoration: none;
+
+}
+#edit-delete{
+border-color: black;
+color:black;
+}
+#recipe-delete:hover {
+
+  color: black;
+
+  // background-color: red;
 }
