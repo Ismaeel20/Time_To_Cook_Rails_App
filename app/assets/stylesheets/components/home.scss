@@ -18,3 +18,23 @@ h1{
 img.setting{
   width:34px;
 }
+
+.site-information {
+  background-color: #000000;
+  opacity: 75%;
+  padding: 64px;
+  // margin-top: 5%;
+}
+
+.site-information h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.site-information p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
