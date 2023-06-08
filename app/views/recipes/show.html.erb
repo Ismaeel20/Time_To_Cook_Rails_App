@@ -28,9 +28,10 @@
     <h1>Your Recipe Timers</h1>
     <div class="timer-grid">
       <% @recipe.recipe_timers.each do |timer| %>
-        <div class="timer-circle">
+        <div class="timer-circle" data-controller="timers">
           <strong><%= timer.ingredient %></strong>
-          <%= timer.time %>
+          <button data-timers-target="button" data-action="click->timers#start"><%= timer.time_in_minutes %></button>
+          <button> reset </button>
           <%= link_to "delete", recipe_timer_path(timer), class: "recipe-delete", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
           <%= link_to "edit", edit_recipe_timer_path(timer), class: "edit-delete" %>
         </div>
