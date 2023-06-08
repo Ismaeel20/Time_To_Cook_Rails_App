@@ -10,4 +10,16 @@ class Timer < ApplicationRecord
   using: {
     tsearch: { prefix: true }
   }
+
+  def time_in_minutes
+    if time >= 60
+      hours = (time/60).floor
+      p hours
+      remaining_time = time % 60
+      p remaining_time
+      "#{hours}:#{remaining_time.to_i.digits.size == 1 ? "0" : ""}#{remaining_time.to_i}:#{(60*(time - time.to_i)).to_i.digits.size == 1 ? "0" : ""}#{(60*(time - time.to_i)).to_i}"
+    else
+      "#{time.to_i}:#{(60*(time - time.to_i)).to_i}"
+    end
+  end
 end
