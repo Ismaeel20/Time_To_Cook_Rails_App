@@ -43,6 +43,6 @@ end
   recipe.user = user_three
   recipe.save!
   10.times do
-    RecipeTimer.create(ingredient: Faker::Food.unique.ingredient, time: rand(5.0..30.0), recipe_id: recipe.id)
+    RecipeTimer.create!(ingredient: Faker::Food.unique.ingredient, time: rand(5.0..30.0), recipe_id: recipe.id)
   end
 end
