@@ -2,14 +2,14 @@
   <div class="container-fluid">
 
     <%= link_to root_path, class: "navbar-brand" do %>
-      <%= image_tag "Time to cook (1).png" %>
+      <%= image_tag "Time to cook (2).png" %>
 
     <% end %>
 
     <div class="d-flex w-4 justify-content-between" style="width: 500px;">
-      <%= link_to "Default Timers", "timers" %>
-      <%= link_to "Your Timers", "recipes" %>
-      <%= link_to "Recipes", "#" %>
+     <div class="nav-bar-links"> <%= link_to "Default Timers", "timers" %> </div>
+     <div class="nav-bar-links"> <%= link_to "Your Timers", "recipes" %> </div>
+     <div class="nav-bar-links"> <%= link_to "Recipes", "#" %> </div>
     </div>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

@@ -5,9 +5,10 @@ class RecipeTimersController < ApplicationController
   #   @new_recipe_timer = RecipeTimer.new
   # end
 
-  # def edit
-  #   @recipe_timer = RecipeTimer.find(params[:id])
-  # end
+  def edit
+    # raise
+    @recipe_timer = RecipeTimer.find(params[:id])
+  end
 
   def create
     @recipe_timer = RecipeTimer.new(recipe_timer_params)
@@ -24,13 +25,13 @@ class RecipeTimersController < ApplicationController
   def destroy
     @recipe_timer = RecipeTimer.find(params[:id])
     @recipe_timer.destroy
-    redirect_to recipe_timers_path, status: :see_other
+    redirect_to recipe_timer_path, status: :see_other
   end
 
   def update
     @recipe_timer = RecipeTimer.find(params[:id])
     if @recipe_timer.update(recipe_timer_params)
-      redirect_to recipe_timer_path(@recipe_timer)
+      redirect_to recipe_path(@recipe_timer.recipe)
     else
       render 'edit', status: :unprocessable_entity
     end

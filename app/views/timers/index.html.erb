@@ -10,12 +10,12 @@
 <% end %>
 </div>
 
-<div>
+<div data-controller="timers" >
  <% @timers.each do |timer| %>
  <ul><%= timer.ingredient %>
  <% if timer.user_id == current_user.id %>
      <%= link_to "delete", timer_path(timer), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-     <%= link_to "edit" %>
+     <%= link_to "edit", edit_timer_path(timer) %>
  <% end %>
  </ul>
 <% end %>
@@ -24,4 +24,8 @@
 <%= f.input :time %>
   <%= f.submit %>
   <% end %>
+
+<div id="defaultParamsExample">
+    <div class="values"></div>
+</div>
 </div>

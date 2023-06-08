@@ -35,6 +35,7 @@
         </div>
       <% end %>
 
+<<<<<<< HEAD
       <%= simple_form_for [ @recipe, @new_timer ] do |f|  %>
           <%= f.input :ingredient %>
           <%= f.input :time %>
@@ -42,3 +43,23 @@
       <% end %>
     </div>
   </div>
+=======
+<div>
+<h1>Your Recipe Timers</h1>
+<% @recipe.recipe_timers.each do |timer| %>
+  <%= timer.time %>
+  <%= timer.ingredient %>
+  <%= link_to "delete", recipe_timer_path(timer), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+  <%= link_to "edit", edit_recipe_timer_path(timer) %>
+<% end %>
+
+<%= simple_form_for [ @recipe, @new_timer ] do |f|  %>
+  <%= f.input :ingredient %>
+  <%= f.input :time %>
+  <%= f.submit %>
+  <% end %>
+
+
+</div>
+</div>
+>>>>>>> c471801d82ff08f1868586a0627a7e3c30260cf6
