@@ -9,13 +9,15 @@
  <div class="search-btn m-auto"><%= submit_tag "Search", class: "btn btn-primary" %></div>
 <% end %>
 </div>
+
 <div class="container">
 <div data-controller="timers" >
   <div class="timer-grid">
  <% @timers.each do |timer| %>
   <div class="timer-circle">
  <ul><%= timer.ingredient %>
- <%= timer.time %>
+   <p data-timers-target="button" data-action="click->timers#start"><%= timer.time_in_minutes %></p>
+        <button> reset </button>
  <% if timer.user_id == current_user.id %>
     <a  id="recipe-delete"  <%= link_to "delete", timer_path(timer), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>>
      <a id="edit-delete"  <%= link_to "edit", edit_timer_path(timer) %>>
@@ -29,4 +31,10 @@
 <%= f.input :time %>
   <%= f.submit %>
   <% end %>
+
+
+
+<div id="defaultParamsExample">
+    <div class="values"></div>
+</div>
 </div>
