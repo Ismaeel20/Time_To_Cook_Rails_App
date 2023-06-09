@@ -1,7 +1,7 @@
 
 <div class="d-flex">
-  <div class="recipe-bar">
-  <div class="d-flex gap-5" >
+
+  <div class="d-flex recipe-bar" >
     <div class="recipes">
       <h1>Recipes</h1>
       <ul><% @recipes.each do |recipe|%>
@@ -14,9 +14,9 @@
 
 
                 <% unless recipe.id == @recipe.id%>
-                  <%= link_to "delete", recipe_path(recipe), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+                  <%= link_to ('<i class="fa-solid fa-trash"></i>').html_safe, recipe_path(recipe), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
                 <% end %>
-                <%= link_to "edit", edit_recipe_path(recipe) %>
+                <%= link_to ('<i class="fa-sharp fa-solid fa-pen"></i>').html_safe, edit_recipe_path(recipe) %>
             </li>
           <% end %>
       </ul>
@@ -27,7 +27,7 @@
       <% end %>
     </div>
     </div>
-    </div>
+
 
     <div class="container">
       <h1>Your Recipe Timers</h1>

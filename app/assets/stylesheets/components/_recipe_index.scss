@@ -1,0 +1,61 @@
+
+
+.recipe-bar{
+  background-color: #454545;
+  opacity: 75%;
+  // padding: 5px;
+  width: 300px;
+  height: 130vh;
+  padding-top: 25px;
+}
+
+.recipe-link {
+  border-style: none;
+  font-size: 20px;
+}
+
+.recipe-link:hover {
+  color: rgb(64, 234, 160);
+  box-shadow: #fff;
+  transform: translateZ(0);
+  transition-duration: .3s;
+  transition-property:transform;
+}
+
+
+.edit-delete{
+
+  border-color: black;
+  color:black;
+  padding-inline: 11px;
+}
+
+.recipe-delete:hover {
+
+  color:blue;
+  border-color: blue;
+
+  // background-color: red;
+}
+.edit-delete:hover {
+
+  color: blue;
+  border-color: blue;
+
+  // background-color: red;
+}
+.recipe-delete{
+  border-color: black;
+  color:black;
+  padding-inline: 11px;
+}
+
+.recipes{
+  // margin-top: 25px;
+}
+
+.recipe-index-text{
+  width: 100%;
+  margin-top: 100px;
+  font-size: 45px;
+}

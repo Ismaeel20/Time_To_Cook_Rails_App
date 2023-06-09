@@ -57,27 +57,6 @@ width:50%;
 }
 
 
-.recipe-bar{
-  background-color: #1c1c1c;
-  opacity: 75%;
-  padding: 25px;
-  width: fit-content;
-}
-
-.recipe-link {
-  border-style: none;
-  font-size: 20px;
-}
-
-.recipe-link:hover {
-  color: rgb(64, 234, 160);
-  box-shadow: #fff;
-  transform: translateZ(0);
-  transition-duration: .3s;
-  transition-property:transform;
-}
-
-
 
 // ......................................
 
@@ -297,6 +276,5 @@ div.search{
   width: 50%;
   margin: 0 auto
 }
-
 
 
