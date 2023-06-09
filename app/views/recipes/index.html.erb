@@ -1,4 +1,4 @@
-
+<div class="d-flex">
 
 <div class="recipe-bar">
   <h1>Recipes</h1>
@@ -6,8 +6,8 @@
         <li id="recipe-delete">
             <%= link_to recipe.name, recipe_path(recipe), class: 'recipe-link' %>
 
-            <%= link_to "delete", recipe_path(recipe), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-                 <%= link_to "edit", edit_recipe_path(recipe) %>
+            <%= link_to ('<i class="fa-solid fa-trash"></i>').html_safe, recipe_path(recipe), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+                 <%= link_to ('<i class="fa-sharp fa-solid fa-pen"></i>').html_safe, edit_recipe_path(recipe) %>
         </li>
       <% end %>
   </ul>
@@ -16,4 +16,6 @@
   <%= f.input :name %>
   <%= f.submit %>
   <% end %>
+</div>
+<h1 class="recipe-index-text">Click on a recipe to access your timers!</h1>
 </div>

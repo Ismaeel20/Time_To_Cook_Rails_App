@@ -31,18 +31,25 @@ export default class extends Controller {
 
     // let time = (parseFloat(this.countdown.split(":")[0]) * 60) + parseFloat(this.countdown.split(":")[1])
   // let elapsed = '0.0';
-    console.log(time)
+    // console.log(time)
     let elapsed = "0.0"
     // console.log(time)
     // let elapsed = ""
 
     if (time >= 0) {
       time -= 1
+      // console.log(time)
     }
+    console.log(time)
 
-    if (time === 0) {
-      elapsed = "00:00"
+    if (time === 0.0) {
+      // elapsed = "00:00"
+      console.log("timer is zero")
       window.clearInterval(this.nIntervId)
+
+      this.intervalId = null;
+      elapsed = "00:00"
+      this.buttonTarget.innerText = elapsed
 
       this.intervalId = null;
       return elapsed
