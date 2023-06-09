@@ -56,15 +56,15 @@ a {
     //   background-color: black;
     //   color: white;
     // }
-    a {
-      border-style: solid;
-      border-radius: 300px;
-      border-color: aliceblue;
-      color: aliceblue;
-      padding: -0.5rem 1rem;
-      text-decoration: none;
+    // a {
+    //   border-style: solid;
+    //   border-radius: 300px;
+    //   border-color: aliceblue;
+    //   color: aliceblue;
+    //   padding: -0.5rem 1rem;
+    //   text-decoration: none;
 
-    }
+    // }
     .edit-delete{
       border-color: black;
       color:black;
@@ -122,3 +122,9 @@ a {
     //   color: black;
     //   padding-inline: 10px;
     // }
+.btn.btn-primary{
+  background-color: darkred;
+}
+.btn.btn-primary:hover{
+  background-color: black;
+}
