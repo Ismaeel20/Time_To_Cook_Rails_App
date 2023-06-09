@@ -29,7 +29,7 @@
   border: 16px solid gray;
   margin-top: 5px;
   margin-bottom:5px;
-
+  transition-duration: 2s;
 
 
   // ul{
@@ -292,4 +292,11 @@ width:50%;
   color: rgb(64, 234, 160);
   border: 16px solid rgb(64, 234, 160);
 }
+
+div.search{
+  width: 50%;
+  margin: 0 auto
+}
+
+
 
