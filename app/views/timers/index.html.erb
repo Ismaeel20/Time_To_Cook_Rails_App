@@ -22,7 +22,7 @@
       </div>
       <i class="fa-solid fa-arrows-rotate"></i>
       <% if timer.user_id == current_user.id %>
-        <%= link_to ('<i class="fa-solid fa-trash"></i>').html_safe, timer_path(timer), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
+        <%= link_to ('<i class="fa-solid fa-trash"></i>').html_safe, timer_path(timer), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
         <%= link_to ('<i class="fa-sharp fa-solid fa-pen"></i>').html_safe, edit_timer_path(timer)%>
       <% end %>
     </div>
