@@ -19,15 +19,22 @@ export default class extends Controller {
   }
 
   myTimer() {
+
     let time = ''
     // let countdown = (event.currentTarget.innerText)
+
     if ((this.countdown.split(':').length) === 2) {
       time = (parseFloat(this.countdown.split(":")[0]) * 60) + parseFloat(this.countdown.split(":")[1])
     } else if ((this.countdown.split(':').length) === 3) {
       time = ((parseFloat(this.countdown.split(":")[0]) * 60) * 60) + (parseFloat(this.countdown.split(":")[1]) * 60) + parseFloat(this.countdown.split(":")[2])
     }
 
+    // let time = (parseFloat(this.countdown.split(":")[0]) * 60) + parseFloat(this.countdown.split(":")[1])
+  // let elapsed = '0.0';
+    console.log(time)
     let elapsed = "0.0"
+    // console.log(time)
+    // let elapsed = ""
 
     if (time >= 0) {
       time -= 1
@@ -36,6 +43,7 @@ export default class extends Controller {
     if (time === 0) {
       elapsed = "00:00"
       window.clearInterval(this.nIntervId)
+
       this.intervalId = null;
       return elapsed
     }
@@ -64,6 +72,9 @@ export default class extends Controller {
     }
     this.countdown = elapsed;
     this.buttonTarget.innerText = this.countdown
+
+  // console.log(countdown)
+
   }
 
 }
