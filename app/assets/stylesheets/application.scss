@@ -59,40 +59,14 @@ a {
     // }
 
     a {
-      border-style: solid;
-      border-radius: 300px;
-      border-color: aliceblue;
+      // border-style: solid;
+      // border-radius: 300px;
+      // border-color: aliceblue;
       color: aliceblue;
       padding: -0.5rem 1rem;
       text-decoration: none;
     }
 
-    .edit-delete{
-
-      border-color: black;
-      color:black;
-      padding-inline: 11px;
-    }
-
-    .recipe-delete:hover {
-
-      color:blue;
-      border-color: blue;
-
-      // background-color: red;
-    }
-    .edit-delete:hover {
-
-      color: blue;
-      border-color: blue;
-
-      // background-color: red;
-    }
-    .recipe-delete{
-      border-color: black;
-      color:black;
-      padding-inline: 11px;
-    }
 
     ul{
       list-style-type: none;
