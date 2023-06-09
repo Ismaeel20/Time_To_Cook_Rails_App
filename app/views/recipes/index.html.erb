@@ -1,9 +1,9 @@
 
-<div class="bk-img">
+<div class="recipe-bar">
   <h1>Recipes</h1>
   <ul><% @recipes.each do |recipe|%>
         <li id="recipe-delete">
-            <%= link_to recipe.name, recipe_path(recipe) %>
+            <%= link_to recipe.name, recipe_path(recipe), class: 'recipe-link' %>
             <%= link_to "delete", recipe_path(recipe), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
                  <%= link_to "edit", edit_recipe_path(recipe) %>
         </li>
