@@ -51,6 +51,7 @@ export default class extends Controller {
       elapsed = "00:00"
       this.buttonTarget.innerText = elapsed
 
+      this.intervalId = null;
       return elapsed
     }
 
