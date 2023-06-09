@@ -10,10 +10,10 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
 .container{
   margin: 20px auto;
   text-align: center;
-  margin-left: 30px;
 }
 
 .bk-img{
@@ -33,7 +33,7 @@ body {
   color: antiquewhite;
   background-color: black;
   background: rgb(0,0,0);
-  background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(30, 30, 30) 35%, rgb(36, 36, 36) 100%);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgb(2, 2, 32) 35%, rgb(24, 1, 43) 100%);
 }
 
 .btn {
@@ -57,20 +57,41 @@ a {
     //   background-color: black;
     //   color: white;
     // }
+    // a {
+    //   border-style: solid;
+    //   border-radius: 300px;
+    //   border-color: aliceblue;
+    //   color: aliceblue;
+    //   padding: -0.5rem 1rem;
+    //   text-decoration: none;
 
-    a {
-      // border-style: solid;
-      // border-radius: 300px;
-      // border-color: aliceblue;
-      color: aliceblue;
-      padding: -0.5rem 1rem;
-      text-decoration: none;
+    // }
+    .edit-delete{
+      border-color: black;
+      color:black;
+      padding-inline: 11px;
     }
 
+    .recipe-delete:hover {
 
-    ul{
-      list-style-type: none;
+      color:blue;
+      border-color: blue;
+
+      // background-color: red;
     }
+    .edit-delete:hover {
+
+      color: blue;
+      border-color: blue;
+
+      // background-color: red;
+    }
+    .recipe-delete{
+      border-color: black;
+      color:black;
+      padding-inline: 11px;
+    }
+
     // .left-recipe-delete {
     //   border-color: black;
     //   color: black;
