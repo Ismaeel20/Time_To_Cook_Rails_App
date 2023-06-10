@@ -41,7 +41,7 @@ body {
 }
 
 a {
-   color: black;
+   color: rgb(255, 255, 255);
  }
 
 
@@ -124,8 +124,12 @@ a {
     //   padding-inline: 10px;
     // }
 .btn.btn-primary{
-  background-color: darkred;
+  background-color: rgb(16, 92, 46);
 }
 .btn.btn-primary:hover{
   background-color: black;
 }
+
+// li {
+//   text-decoration: none;
+//  }

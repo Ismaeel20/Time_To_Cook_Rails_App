@@ -30,7 +30,7 @@
 
 
     <div class="container">
-      <h1>Your Recipe Timers</h1>
+      <h1><%= @recipe.name %></h1>
       <div class="timer-grid">
         <% @recipe.recipe_timers.each do |timer| %>
         <div class="timer-card">
