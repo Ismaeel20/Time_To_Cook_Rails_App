@@ -31,9 +31,9 @@ body {
   margin: 0;
   height: 90vh;
   color: antiquewhite;
-  background-color: black;
-  background: rgb(0,0,0);
-  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgb(2, 2, 32) 35%, rgb(24, 1, 43) 100%);
+  // background-color: black;
+  // background: rgb(0,0,0);
+  // background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgb(2, 2, 32) 35%, rgb(24, 1, 43) 100%);
 }
 
 .btn {
@@ -133,3 +133,38 @@ a {
 // li {
 //   text-decoration: none;
 //  }
+
+// ..............................
+:root {
+  --primary-color: #000000; /* Light mode color */
+  --background-color: #ffffff; /* Light mode background color */
+}
+
+.dark-mode {
+  --primary-color: #ffffff; /* Dark mode color */
+  --background-color: #000000; /* Dark mode background color */
+}
+
+.dark-mode h1 {
+  color: #ffffff; /* Example color for headings in dark mode */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #ffffff; /* Dark mode color */
+    --background-color: #000000; /* Dark mode background color */
+  }
+}
+
+body {
+  color: var(--primary-color);
+  background-color: var(--background-color);
+}
+
+
+
+
+.dark-mode .site-information {
+  background-color: #1f1f1f; /* Example background color for site information section in dark mode */
+  color: #ffffff; /* Example color for text in site information section in dark mode */
+}
