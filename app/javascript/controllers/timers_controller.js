@@ -7,6 +7,7 @@ export default class extends Controller {
     console.log("testing")
     // console.log(this)
     this.nIntervId;
+
   }
 
   start(event) {
@@ -15,6 +16,8 @@ export default class extends Controller {
     if (!this.nIntervId) {
       this.intervalId = window.setInterval(() => {this.myTimer()}, 1000)
     }
+    this.element.classList.add('active')
+
     // this.buttonTarget.innerText = this.countdown
   }
 

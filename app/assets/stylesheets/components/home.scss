@@ -110,3 +110,18 @@ img.setting{
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
+
+.btn-homepage {
+  width: auto;
+  height: auto;
+  font-size: x-large;
+  background-color: #6C6D4B;
+  a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  a:hover{
+    color: #000000;;
+  }
+}
