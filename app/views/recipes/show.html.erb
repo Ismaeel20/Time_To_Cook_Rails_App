@@ -2,25 +2,29 @@
 <div class="d-flex">
 
   <div class="d-flex recipe-bar" >
-    <div class="recipes">
-      <h1>Recipes</h1>
+    <div class="recipes w-100">
+      <h1 class="text-light">Recipes</h1>
       <ul><% @recipes.each do |recipe|%>
             <li class="list-unstyled">
                 <% if recipe.user_id == @recipe.id %>
-                <div class="recipe-name">
-               <%= link_to recipe.namee, recipe_path(recipe), class: 'recipe-link' %>
-                </div>
+                  <%= link_to recipe_path(recipe), class: 'recipe-link' do %>
+                    <div class="recipe-name">
+                      <%= recipe.name %>
+                    </div>
+                  <% end %>
                 <% else %>
-                <div class="recipe-name">
-                  <%= link_to recipe.name, recipe_path(recipe), class: 'recipe-link' %>
-                </div>
+                   <%= link_to recipe_path(recipe), class: 'recipe-link' do %>
+                    <div class="recipe-name">
+                      <%= recipe.name %>
+                    </div>
+                  <% end %>
                 <% end %>
 
 
                 <%# <% unless recipe.id == @recipe.id%>
-                <%# <%= link_to ('<i class="fa-solid fa-trash"></i>').html_safe, recipe_path(recipe), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-                <%# <% end %>
-                <%# <%= link_to ('<i class="fa-sharp fa-solid fa-pen"></i>').html_safe, edit_recipe_path(recipe) %>
+                <%# <%= link_to ('<i class="fa-solid fa-trash"></i>').html_safe, recipe_path(recipe), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+                 <%# <% end %>
+              <%# <%= link_to ('<i class="fa-sharp fa-solid fa-pen"></i>').html_safe, edit_recipe_path(recipe) %>
             </li>
           <% end %>
       </ul>
