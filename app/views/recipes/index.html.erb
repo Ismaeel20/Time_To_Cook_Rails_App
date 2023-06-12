@@ -3,11 +3,12 @@
 <div class="recipe-bar">
   <h1>Recipes</h1>
   <ul><% @recipes.each do |recipe|%>
-        <li id="recipe-delete">
+        <li class="list-unstyled">
+            <div class="recipe-name">
             <%= link_to recipe.name, recipe_path(recipe), class: 'recipe-link' %>
-
-            <%= link_to ('<i class="fa-solid fa-trash"></i>').html_safe, recipe_path(recipe), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-                 <%= link_to ('<i class="fa-sharp fa-solid fa-pen"></i>').html_safe, edit_recipe_path(recipe) %>
+            </div>
+            <%# <%= link_to ('<i class="fa-solid fa-trash"></i>').html_safe, recipe_path(recipe), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+                 <%# <%= link_to ('<i class="fa-sharp fa-solid fa-pen"></i>').html_safe, edit_recipe_path(recipe) %>
         </li>
       <% end %>
   </ul>
@@ -17,5 +18,5 @@
   <%= f.submit %>
   <% end %>
 </div>
-<h1 class="recipe-index-text">Click on a recipe to access your timers!</h1>
+  <h1 class="recipe-index-text">Click on a recipe to access your timers!</h1>
 </div>
