@@ -8,7 +8,7 @@
 
     <div class="d-flex w-4 justify-content-between" style="width: 900px; font-size: 25px">
      <div class="nav-bar-links"> <%= link_to "Default Timers", timers_path %> </div>
-     <div class="nav-bar-links"> <%= link_to "Your Timers", recipes_path %> </div>
+     <div class="nav-bar-links"> <%= link_to "My Timers", recipes_path %> </div>
      <div class="nav-bar-links"> <%= link_to "Recipe Information", recipe_info_path %> </div>
     </div>
 
@@ -17,7 +17,7 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-       <%= image_tag "https://freeiconshop.com/wp-content/uploads/edd/settings-solid.png", class: "settings", id: "darkModeIcon" %>
+       <%# <%= image_tag "https://freeiconshop.com/wp-content/uploads/edd/settings-solid.png", class: "settings", id: "darkModeIcon" %>
 
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
