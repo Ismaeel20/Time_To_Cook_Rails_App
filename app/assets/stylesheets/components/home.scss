@@ -21,8 +21,8 @@ img.setting{
 
 .site-information {
   background-color: #000000;
-  opacity: 75%;
-  padding: 64px;
+  // opacity: 75%;
+  padding: 14px;
   // margin-top: 5%;
 }
 
@@ -37,4 +37,76 @@ img.setting{
   line-height: 1.5;
   margin-bottom: 10px;
   color: #ffffff;
+}
+
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  background-color: white;
+  width: 100%;
+  height: 200px;
+  // position: fixed;
+  // bottom: 0px;
+  // left: 0px;
+  // height: 40vh;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  margin-top: 350px;
+  .card-category {
+    padding: 5px 10px;
+    p {
+      font-size: 0.9rem;
+    }
+  }
+  #opacity-my-timers {
+    // background-color: white;
+    // color: black;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url('https://img.freepik.com/premium-photo/fresh-herbs-spices-peppers-dill-parsley-black-background-place-text-culinary-concept-background-menu-recipe_114106-2324.jpg');
+    background-size: cover;
+}
+  #opacity-d-timers {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://images.pexels.com/photos/4082638/pexels-photo-4082638.jpeg');
+    background-size: cover;
+  }
+  #opacity-recipes {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url('https://i.pinimg.com/originals/c1/14/c3/c114c345413eebe514d073473e96c756.jpg');
+    background-size: cover;
+  }
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
