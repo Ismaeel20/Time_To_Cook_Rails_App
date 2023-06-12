@@ -10,18 +10,26 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+body {
+  font-family: 'Signika', sans-serif;
+}
 
-.container{
+.container {
+  border-radius: 10px;
   margin: 20px auto;
   text-align: center;
+  display: block;
+  width: 70%;
+  border: 1px solid rgba(255,255,255,.4);
 }
 
 .bk-img{
+
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('background-cook.jpg');
   background-size: cover;
   background-position: center;
   margin: 0;
-  // height: 90vh;
+  height: 90vh;
   color: antiquewhite;
 }
 
@@ -41,7 +49,7 @@ body {
 }
 
 a {
-   color: black;
+   color: rgb(255, 255, 255);
  }
 
 
@@ -124,8 +132,47 @@ a {
     //   padding-inline: 10px;
     // }
 .btn.btn-primary{
-  background-color: darkred;
+  background-color: $ttc-green;
+  &:hover{
+    background-color: black;
+  }
 }
-.btn.btn-primary:hover{
-  background-color: black;
-}
+
+// li {
+//   text-decoration: none;
+//  }
+
+// ..............................
+// :root {
+//   --primary-color: #000000; /* Light mode color */
+//   --background-color: #ffffff; /* Light mode background color */
+// }
+
+// .dark-mode {
+//   --primary-color: #ffffff; /* Dark mode color */
+//   --background-color: #000000; /* Dark mode background color */
+// }
+
+// .dark-mode h1 {
+//   color: #ffffff; /* Example color for headings in dark mode */
+// }
+
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --primary-color: #ffffff; /* Dark mode color */
+//     --background-color: #000000; /* Dark mode background color */
+//   }
+// }
+
+// body {
+//   color: var(--primary-color);
+//   background-color: var(--background-color);
+// }
+
+
+
+
+// .dark-mode .site-information {
+//   background-color: #1f1f1f; /* Example background color for site information section in dark mode */
+//   color: #ffffff; /* Example color for text in site information section in dark mode */
+// }
