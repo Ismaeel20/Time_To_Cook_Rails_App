@@ -5,37 +5,41 @@
     <div class="recipes">
       <h1>Recipes</h1>
       <ul><% @recipes.each do |recipe|%>
-            <li>
+            <li class="list-unstyled">
                 <% if recipe.user_id == @recipe.id %>
-               <%= link_to recipe.name, recipe_path(recipe), class: 'recipe-link' %>
+                <div class="recipe-name">
+               <%= link_to recipe.namee, recipe_path(recipe), class: 'recipe-link' %>
+                </div>
                 <% else %>
+                <div class="recipe-name">
                   <%= link_to recipe.name, recipe_path(recipe), class: 'recipe-link' %>
+                </div>
                 <% end %>
 
 
-                <% unless recipe.id == @recipe.id%>
-                  <%= link_to ('<i class="fa-solid fa-trash"></i>').html_safe, recipe_path(recipe), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-                <% end %>
-                <%= link_to ('<i class="fa-sharp fa-solid fa-pen"></i>').html_safe, edit_recipe_path(recipe) %>
+                <%# <% unless recipe.id == @recipe.id%>
+                <%# <%= link_to ('<i class="fa-solid fa-trash"></i>').html_safe, recipe_path(recipe), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+                <%# <% end %>
+                <%# <%= link_to ('<i class="fa-sharp fa-solid fa-pen"></i>').html_safe, edit_recipe_path(recipe) %>
             </li>
           <% end %>
       </ul>
 
       <%= simple_form_for @new_recipe do |f|  %>
-      <%= f.input :name %>
-      <%= f.submit %>
+      <%= f.input :name, label: "Name:" %>
+      <%= f.submit :"Add Recipe" %>
       <% end %>
     </div>
     </div>
 
 
     <div class="container">
-      <h1><%= @recipe.name %></h1>
-      <div class="timer-grid">
+    <h1><%= @recipe.name %></h1>
+      <div class="timer-grid h5">
         <% @recipe.recipe_timers.each do |timer| %>
         <div class="timer-card">
             <strong><%= timer.ingredient %></strong>
-          <div class="timer-circle" data-controller="timers" data-timers-target="button" data-action="click->timers#start">
+          <div class="timer-circle display-5" data-controller="timers" data-timers-target="button" data-action="click->timers#start">
             <%= timer.time_in_minutes %>
           </div>
             <i class="fa-solid fa-arrows-rotate"></i>
@@ -50,7 +54,7 @@
       <%= simple_form_for [ @recipe, @new_timer ] do |f|  %>
           <%= f.input :ingredient %>
           <%= f.input :time %>
-          <%= f.submit %>
+          <%= f.submit :"Add Timer" %>
       <% end %>
       <div>
     </div>
