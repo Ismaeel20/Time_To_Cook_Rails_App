@@ -57,6 +57,9 @@ img.setting{
   .card-category {
     padding: 5px 10px;
     p {
+      background: rgba($color: black, $alpha: 0.5);
+      padding: 3px 5px;
+      border-radius: 5px;
       font-size: 0.9rem;
     }
   }
@@ -117,11 +120,14 @@ img.setting{
   height: auto;
   font-size: x-large;
   background-color: #6C6D4B;
+  border-radius: 23Px;
   a {
     text-decoration: none;
     color: #ffffff;
   }
-  a:hover{
-    color: #000000;;
-  }
+}
+
+.btn-homepage:hover {
+    color: #b4b4b4;;
+    background-color: #87895d50 !important;
 }

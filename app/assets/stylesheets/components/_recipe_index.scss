@@ -115,3 +115,31 @@ input[type=submit]:hover {
   margin-top: 100px;
   font-size: 45px;
 }
+
+#container-recipes {
+  display: inline-table;
+  padding: 2px;
+}
+
+.narrow-form {
+  max-width: 140px;
+  margin: 0 auto;
+}
+
+
+input[type=submit] {
+  background-color: #95984b;
+  box-shadow: #fff;
+  transform: translateZ(0);
+  transition-duration: .3s;
+  transition-property: transform;
+  border-radius: 15px;
+  width: 9em;
+  height: 3em;
+  color: white;
+}
+
+input[type=submit]:hover {
+  color: #c0c0c0;;
+  background-color: #87895d9f !important;
+}
