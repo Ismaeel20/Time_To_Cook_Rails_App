@@ -20,7 +20,7 @@ body {
   text-align: center;
   display: block;
   width: 70%;
-  border: 1px solid rgba(255,255,255,.4);
+  border: 3px solid rgba(255, 255, 255, 0.4);
 }
 
 .bk-img{
@@ -100,6 +100,17 @@ a {
       padding-inline: 11px;
     }
 
+    // .btn-primary{
+    //   background-color: $ttc-green;
+    //   &:hover{
+    //     background-color: black;
+    //   }
+    // }
+
+    abbr {
+      display: none;
+    }
+
     // .left-recipe-delete {
     //   border-color: black;
     //   color: black;
@@ -131,12 +142,6 @@ a {
     //   color: black;
     //   padding-inline: 10px;
     // }
-.btn.btn-primary{
-  background-color: $ttc-green;
-  &:hover{
-    background-color: black;
-  }
-}
 
 // li {
 //   text-decoration: none;
