@@ -21,17 +21,40 @@
   display: flex;
   justify-content: center;
   margin-right: 50px;
+  transition: 0.5s;
+  width: 60%;
+  overflow: hidden;
+  text-wrap: nowrap;
+}
+
+.recipe-name:hover {
+  text-shadow: #95984B;
+  box-shadow: #95984B;
+
 }
 
 input[type=submit] {
-  background-color: #95984b;
+  background-color: #95984B;
   box-shadow: #fff;
   transform: translateZ(0);
   transition-duration: .3s;
-  transition-property:transform;
+  transition-property: transform;
   border-radius: 15px;
-  width: 15em;  height: 3em
+  width: 9em;
+  height: 3em;
+  color: white;
 }
+input[type=submit]:hover {
+  color: #C0C0C0;;
+  background-color: #87895d9f !important;
+}
+
+
+
+
+
+
+
 
 .recipe-bar-index{
   background-color: #454545;
@@ -44,7 +67,7 @@ input[type=submit] {
 .recipe-link {
   border-style: none;
   font-size: 20px;
-  color: antiquewhite;
+  color: white;
   text-decoration: none;
 }
 

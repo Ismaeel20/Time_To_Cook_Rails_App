@@ -18,7 +18,7 @@
     <% @timers.each do |timer| %>
     <div class="timer-card">
       <%= timer.ingredient %>
-      <div data-controller="timers" data-timers-target="button" data-action="click->timers#start">
+      <div data-controller="timers" class="timer-circle display-5" data-timers-target="button" data-action="click->timers#start">
           <%= timer.time_in_minutes %>
       </div>
       <i class="fa-solid fa-arrows-rotate"></i>

@@ -4,11 +4,15 @@
   <h1>Recipes</h1>
   <ul><% @recipes.each do |recipe|%>
         <li class="list-unstyled">
-            <div class="recipe-name">
-            <%= link_to recipe.name, recipe_path(recipe), class: 'recipe-link' %>
-            </div>
+            <%= link_to recipe_path(recipe), class: 'recipe-link' do %>
+                    <div class="recipe-name">
+                      <%= recipe.name %>
+                    </div>
+                  <% end %>
+            <%# <%= link_to recipe.name, recipe_path(recipe), class: 'recipe-link' %>
+
             <%# <%= link_to ('<i class="fa-solid fa-trash"></i>').html_safe, recipe_path(recipe), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-                 <%# <%= link_to ('<i class="fa-sharp fa-solid fa-pen"></i>').html_safe, edit_recipe_path(recipe) %>
+             <%# <%= link_to ('<i class="fa-sharp fa-solid fa-pen"></i>').html_safe, edit_recipe_path(recipe) %>
         </li>
       <% end %>
   </ul>
