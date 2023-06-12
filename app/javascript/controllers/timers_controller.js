@@ -86,6 +86,7 @@ export default class extends Controller {
 
 }
 
+
 // Below is code for toggle dark mode!
 
 const darkModeIcon = document.getElementById('darkModeIcon');
