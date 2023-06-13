@@ -23,9 +23,10 @@
   justify-content: center;
   margin-right: 50px;
   transition: 0.5s;
-  width: 60%;
+  width: 85%;
   overflow: hidden;
-  text-wrap: nowrap;
+  text-wrap: wrap;
+  text-align: center;
 }
 
 .recipe-name:hover {
@@ -35,8 +36,18 @@
 }
 
 
+.add-btn {
+  background: none;
+  border: none;
+}
 
+.add-btn i {
+color: #95984b;
+}
 
+.modal-content {
+  background-color: #454545 !important ;
+}
 
 
 
