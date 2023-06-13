@@ -1,7 +1,12 @@
 <div class="d-flex">
 
 <div class="recipe-bar-index">
-  <h1>Recipes</h1>
+<div class="d-flex justify-content-around align-items-center">
+  <h1 style="margin-right: -40px; ">Recipes</h1>
+  <button type="button" class="add-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <i class="fa-solid fa-circle-plus fa-lg" style=></i>
+  </button>
+</div>
   <ul><% @recipes.each do |recipe|%>
         <li class="list-unstyled">
             <%= link_to recipe_path(recipe), class: 'recipe-link' do %>
@@ -17,10 +22,34 @@
       <% end %>
   </ul>
 
-  <%= simple_form_for @new_recipe, html: { class: "narrow-form" } do |f|  %>
-  <%= f.input :name %>
-  <%= f.submit %>
-  <% end %>
+  <%# <%= simple_form_for @new_recipe, html: { class: "narrow-form" } do |f|  %>
+  <%# <%= f.input :name %>
+  <%# <%= f.submit %>
+  <%# <% end %>
 </div>
   <h1 class="recipe-index-text">Click on a recipe to access your timers!</h1>
+</div>
+
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Add a new recipe</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for @new_recipe, html: { class: "narrow-form" } do |f|  %>
+        <%= f.input :name %>
+      </div>
+      <div class="modal-footer">
+        <%= f.submit %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
