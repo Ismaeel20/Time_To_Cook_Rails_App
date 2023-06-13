@@ -107,6 +107,12 @@ export default class extends Controller {
   myTimer() {
     console.log({ passed: this.timePassed, left: this.timeLeft })
 
+    if ( this.timeLeft === 0) {
+        console.log('finished')
+    }
+    else {
+
+
     let time = ''
     // let countdown = (event.currentTarget.innerText)
 
@@ -197,6 +203,10 @@ export default class extends Controller {
 
   this.#setCircleDasharray();
   this.#setRemainingPathColor(this.timeLeft);
+
+
+    }
+
 
   }
 
