@@ -41,18 +41,18 @@
     <h1><%= @recipe.name %></h1>
       <div class="timer-grid h5">
         <% @recipe.recipe_timers.each do |timer| %>
-        <div class="timer-card">
+        <div class="timer-card" data-controller="timers" data-timers-initial-time-value=<%=timer.time_in_minutes%>>
           <%= timer.ingredient %>
-          <div data-controller="timers" class="timer-circle display-5" data-timers-target="button" data-action="click->timers#start">
+          <div class="timer-circle display-5" data-timers-target="button" data-action="click->timers#start">
               <%= timer.time_in_minutes %>
           </div>
           <div class="icons-timer">
-          <i class="fa-solid fa-arrows-rotate p-1"></i>
-          <% if timer.recipe.user_id == current_user.id %>
-            <%= link_to ('<i class="fa-solid fa-trash p-2"></i>').html_safe, recipe_timer_path(timer), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-            <%= link_to ('<i class="fa-sharp fa-solid fa-pen p-1"></i>').html_safe, edit_recipe_timer_path(timer)%>
-          <% end %>
-        </div>
+            <button class="fa-solid fa-arrows-rotate p-1"  data-action="click->timers#reset"></button>
+            <% if timer.recipe.user_id == current_user.id %>
+              <%= link_to ('<i class="fa-solid fa-trash p-2"></i>').html_safe, recipe_timer_path(timer), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+              <%= link_to ('<i class="fa-sharp fa-solid fa-pen p-1"></i>').html_safe, edit_recipe_timer_path(timer)%>
+            <% end %>
+         </div>
         </div>
         <% end %>
 
