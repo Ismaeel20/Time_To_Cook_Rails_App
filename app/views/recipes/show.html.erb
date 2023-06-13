@@ -31,7 +31,7 @@
 
       <%= simple_form_for @new_recipe do |f|  %>
       <%= f.input :name, label: "Name:" %>
-      <%= f.submit :"Add Recipe" %>
+      <%= f.submit "Add Recipe" %>
       <% end %>
     </div>
     </div>
@@ -43,14 +43,16 @@
         <% @recipe.recipe_timers.each do |timer| %>
         <div class="timer-card">
           <%= timer.ingredient %>
-          <div data-controller="timers" data-timers-target="button" data-action="click->timers#start">
+          <div data-controller="timers" class="timer-circle display-5" data-timers-target="button" data-action="click->timers#start">
               <%= timer.time_in_minutes %>
           </div>
-          <i class="fa-solid fa-arrows-rotate"></i>
+          <div class="icons-timer">
+          <i class="fa-solid fa-arrows-rotate p-1"></i>
           <% if timer.recipe.user_id == current_user.id %>
-            <%= link_to ('<i class="fa-solid fa-trash"></i>').html_safe, recipe_timer_path(timer), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-            <%= link_to ('<i class="fa-sharp fa-solid fa-pen"></i>').html_safe, edit_recipe_timer_path(timer)%>
+            <%= link_to ('<i class="fa-solid fa-trash p-2"></i>').html_safe, recipe_timer_path(timer), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+            <%= link_to ('<i class="fa-sharp fa-solid fa-pen p-1"></i>').html_safe, edit_recipe_timer_path(timer)%>
           <% end %>
+        </div>
         </div>
         <% end %>
 
