@@ -34,10 +34,10 @@
 
 
 
-  <div class="w-75 p-3 ">
+  <div style="display: flex; justify-content: center;">
   <%= simple_form_for @timer do |f| %>
-    <%= f.input :ingredient %>
-    <%= f.input :time %>
+    <%= f.input :ingredient, input_html: { style: 'width: 350px' } %>
+    <%= f.input :time, input_html: { style: 'width: 350px' } %>
     <%= f.submit %>
   <% end %>
   </div>
