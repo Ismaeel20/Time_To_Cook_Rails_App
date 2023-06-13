@@ -8,7 +8,7 @@
     class: "form-control",
     placeholder: "Find a timer"
   %>
- <div class="search-btn m-auto"><%= submit_tag "Search", class: "btn btn-primary" %></div>
+ <div class="search-btn m-auto"><%= submit_tag "Search", class: "btn btn-primary rounded" %></div>
 <% end %>
 </div>
 
@@ -21,20 +21,26 @@
       <div data-controller="timers" class="timer-circle display-5" data-timers-target="button" data-action="click->timers#start">
           <%= timer.time_in_minutes %>
       </div>
-      <i class="fa-solid fa-arrows-rotate"></i>
+      <div>
+      <i class="fa-solid fa-arrows-rotate p-1"></i>
       <% if timer.user_id == current_user.id %>
-        <%= link_to ('<i class="fa-solid fa-trash"></i>').html_safe, timer_path(timer), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-        <%= link_to ('<i class="fa-sharp fa-solid fa-pen"></i>').html_safe, edit_timer_path(timer)%>
+        <%= link_to ('<i class="fa-solid fa-trash p-2"></i>').html_safe, timer_path(timer), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+        <%= link_to ('<i class="fa-sharp fa-solid fa-pen p-1"></i>').html_safe, edit_timer_path(timer)%>
       <% end %>
+      </div>
     </div>
     <% end %>
   </div>
 
+
+
+  <div class="w-75 p-3 ">
   <%= simple_form_for @timer do |f| %>
     <%= f.input :ingredient %>
     <%= f.input :time %>
     <%= f.submit %>
   <% end %>
+  </div>
 
   <%# <div id="defaultParamsExample">
       <div class="values"></div> %>

@@ -5,8 +5,9 @@
   opacity: 75%;
   // padding: 5px;
   width: 300px;
-  // height: 130vh;
+  height: 130vh;
   padding-top: 25px;
+  overflow-y: scroll;
 }
 
 .list-unstyled {
@@ -33,21 +34,6 @@
 
 }
 
-input[type=submit] {
-  background-color: #95984B;
-  box-shadow: #fff;
-  transform: translateZ(0);
-  transition-duration: .3s;
-  transition-property: transform;
-  border-radius: 15px;
-  width: 9em;
-  height: 3em;
-  color: white;
-}
-input[type=submit]:hover {
-  color: #C0C0C0;;
-  background-color: #87895d9f !important;
-}
 
 
 
@@ -63,6 +49,7 @@ input[type=submit]:hover {
   width: 300px;
   height: 130vh;
   padding-top: 25px;
+  overflow-y: scroll;
 }
 .recipe-link {
   border-style: none;
@@ -82,25 +69,25 @@ input[type=submit]:hover {
 
 // .edit-delete{
 
-//   border-color: black;
-//   color:black;
+  //   border-color: black;
+  //   color:black;
 //   padding-inline: 11px;
 // }
 
 // .recipe-delete:hover {
 
-//   color:blue;
-//   border-color: blue;
+  //   color:blue;
+  //   border-color: blue;
 
 //   // background-color: red;
 // }
 // .edit-delete:hover {
 
-//   color: blue;
-//   border-color: blue;
+  //   color: blue;
+  //   border-color: blue;
 
-//   // background-color: red;
-// }
+  //   // background-color: red;
+  // }
 // .recipe-delete{
 //   border-color: black;
 //   color:black;
@@ -127,6 +114,7 @@ input[type=submit]:hover {
 }
 
 
+
 input[type=submit] {
   background-color: #95984b;
   box-shadow: #fff;
@@ -143,3 +131,7 @@ input[type=submit]:hover {
   color: #c0c0c0;;
   background-color: #87895d9f !important;
 }
+
+// .icons-timer {
+//   padding: 3px;
+// }
