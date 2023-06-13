@@ -57,6 +57,9 @@ export default class extends Controller {
     if (!this.timer_active) {
       this.intervalId = window.setInterval(() => {this.myTimer()}, 1000)
       this.timer_active = true
+    } else {
+        clearInterval(this.intervalId)
+        this.timer_active = false
     }
     // this.element.classList.add('active')
 
