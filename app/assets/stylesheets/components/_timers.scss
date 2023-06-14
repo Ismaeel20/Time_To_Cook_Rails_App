@@ -49,6 +49,7 @@ a{
 .create{
 margin:auto;
 width:50%;
+
 margin-bottom: 20px;
 }
 
@@ -270,6 +271,7 @@ margin-bottom: 20px;
 .timer-circle:hover, .timer-circle.active{
   color: rgb(64, 234, 160);
   border: 16px solid #95984b;
+  cursor: pointer;
 }
 
 div.search{
