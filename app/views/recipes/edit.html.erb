@@ -19,4 +19,4 @@
 <h1>Master the Minutes: Fine-Tune Your Recipes!</h1>
   </div>
 
-<%= link_to ('<i class="bin-recipes fa-solid fa-trash p-2"></i>').html_safe, recipes_path(@recipe)%>
+<%= link_to ('<i class="bin-recipes fa-solid fa-trash p-2"></i>').html_safe, recipe_path(@recipe), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
