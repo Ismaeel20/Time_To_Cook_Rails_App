@@ -22,7 +22,7 @@ user_three = User.create(email: "ismaeel@lewagon.com", password: "123456")
 
 puts "creating timers"
 
-
+Timer.create(ingredient: 'Chips', time: 15)
 Timer.create(ingredient: 'Rice', time: 20)
 Timer.create(ingredient: 'Pasta', time: 10)
 Timer.create(ingredient: 'Roast Beef', time: 20)
