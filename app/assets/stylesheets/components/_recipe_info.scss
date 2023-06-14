@@ -30,3 +30,52 @@ padding: 176px;
   margin-top: 20px;
   padding: 10px;
 }
+
+.recipe {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px ;
+}
+
+.recipe-content {
+  width: 60%;
+}
+.salmon {
+  background-image: url('https://disheswithdad.com/wp-content/uploads/2020/03/lemon-dill-salmon-2.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 300px;
+}
+
+.garlic-pasta {
+  background-image: url('https://bakeitwithlove.com/wp-content/uploads/2022/01/garlic-parmesan-angel-hair-pasta-sq.jpg.webp');
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 300px;
+}
+
+.beef {
+  background-image: url('https://s23209.pcdn.co/wp-content/uploads/2016/10/221024_DD_Slow-Cooker-Beef-Stew_218-760x1140.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 300px;
+}
+
+.chicken-noodles {
+  background-image: url('https://i0.wp.com/www.wokandkin.com/wp-content/uploads/2022/04/Fried-Wings-In-Fish-Sauce-saved-for-web-1200px.png?resize=720%2C1080&ssl=1');
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 300px;
+}
+
+.c-brownies {
+  background-image: url('https://img.buzzfeed.com/video-api-prod/assets/fafe8090b4f3434f80c33b6e4ce40e24/BFV21539_BestFudgyBrownies-ThumbB1080.jpg?resize=1200:*');
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 300px
+}
