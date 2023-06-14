@@ -20,6 +20,7 @@
         <%= timer.ingredient %>
         <div class="timer-circle display-5" data-timers-target="button" data-action="click->timers#start">
           <%= timer.time_in_minutes %>
+          <%= audio_tag "alarm.mp3", data: {timers_target: 'audio'} %>
         </div>
         <div>
           <button class="reset-button fa-solid fa-arrows-rotate p-1"  data-action="click->timers#reset"></button>

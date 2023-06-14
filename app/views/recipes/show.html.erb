@@ -24,7 +24,7 @@
                 <%# <% unless recipe.id == @recipe.id%>
                 <%# <%= link_to ('<i class="fa-solid fa-trash"></i>').html_safe, recipe_path(recipe), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
                  <%# <% end %>
-              <%# <%= link_to ('<i class="fa-sharp fa-solid fa-pen"></i>').html_safe, edit_recipe_path(recipe) %>
+                <%# <%= link_to ('<i class="fa-sharp fa-solid fa-pen"></i>').html_safe, edit_recipe_path(recipe) %>
             </li>
           <% end %>
       </ul>
@@ -45,6 +45,8 @@
           <%= timer.ingredient %>
           <div class="timer-circle display-5" data-timers-target="button" data-action="click->timers#start">
               <%= timer.time_in_minutes %>
+              <%# <audio data-timers-target="audio" src="app/assets/sounds/explosion.mp3"></audio> %>
+              <%= audio_tag "alarm.mp3", data: {timers_target: 'audio'} %>
           </div>
           <div class="icons-timer">
             <button class="reset-button fa-solid fa-arrows-rotate p-1"  data-action="click->timers#reset"></button>

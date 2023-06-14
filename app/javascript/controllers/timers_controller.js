@@ -2,13 +2,14 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="timers"
 export default class extends Controller {
-  static targets = ["button"]
+  static targets = ["button", "audio"]
   static values = {
     initialTime: String
   }
 
   connect() {
     console.log("testing")
+    this.audio = this.audioTarget
     // console.log(this)
     this.timePassed = 0
     this.full_dash_array = 283;
@@ -108,7 +109,12 @@ export default class extends Controller {
     console.log({ passed: this.timePassed, left: this.timeLeft })
 
     if ( this.timeLeft === 0) {
+        clearInterval(this.intervalId)
         console.log('finished')
+        // alarm
+
+        this.audio.play()
+
     }
     else {
 
@@ -208,6 +214,11 @@ export default class extends Controller {
     }
 
 
+  }
+
+  #alarm() {
+    const sound = this.load()
+    sound.play()
   }
 
   #formatTime(time) {
