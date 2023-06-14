@@ -38,7 +38,10 @@
 
 
     <div class="container" id="container-recipes">
-    <h1><%= @recipe.name %></h1>
+      <div class="d-flex align-items-center justify-content-center" >
+        <h1><%= @recipe.name %></h1>
+        <%= link_to ('<i class="fa-sharp fa-solid fa-pen p-1"></i>').html_safe, edit_recipe_path, class: "ps-3"%>
+      </div>
       <div class="timer-grid h5">
         <% @recipe.recipe_timers.each do |timer| %>
         <div class="timer-card" data-controller="timers" data-timers-initial-time-value=<%=timer.time_in_minutes%>>
@@ -57,7 +60,6 @@
          </div>
         </div>
         <% end %>
-
 
       </div>
       <div class="create">
