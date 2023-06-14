@@ -24,13 +24,17 @@ body {
 }
 
 .bk-img{
-
+  position: absolute;
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('background-cook.jpg');
   background-size: cover;
   background-position: center;
   margin: 0;
   height: 100vh;
   color: antiquewhite;
+}
+
+.cta {
+  margin-top: 131px;
 }
 
 body {
@@ -46,13 +50,18 @@ body {
 
 .btn {
   color: antiquewhite;
+  height: 5pc;
+  width: 30pc;
 }
 
 a {
    color: rgb(255, 255, 255);
  }
 
-
+#home-btn{
+  height: 5pc !important;
+  width: 30pc  !important;
+}
 
  // body {
    //   padding: 25px;
