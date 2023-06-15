@@ -257,4 +257,24 @@ input  {
     display: flex;
     justify-content: space-around;
     margin: 0px auto;
+    border-radius: 50px;
+}
+
+.text-light {
+    --bs-text-opacity: 1;
+    color: antiquewhite !important;
+}
+.recipe-name{
+  border: solid;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    margin-right: 50px;
+    transition: 0.5s;
+    width: 85%;
+    overflow: hidden;
+    text-wrap: wrap;
+    text-align: center;
+    color: antiquewhite;
 }
