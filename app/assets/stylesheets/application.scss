@@ -19,7 +19,6 @@ body {
   margin: 20px auto;
   text-align: center;
   display: block;
-  width: 80%;
   border: 3px solid rgba(255, 255, 255, 0.4);
 }
 
@@ -50,19 +49,13 @@ body {
   background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgb(2, 2, 32) 35%, rgb(24, 1, 43) 100%);
 }
 
-.btn {
-  color: antiquewhite;
-  height: 5pc;
-  width: 30pc;
-}
-
 a {
    color: rgb(255, 255, 255);
  }
 
 #home-btn{
   height: 5pc !important;
-  width: 17pc  !important;
+  width: 18pc  !important;
   margin-bottom: 1.5rem;
 }
 
@@ -125,6 +118,9 @@ a {
 
     .reset-button {
       border-radius: 100%;
+      background: none;
+      border: none;
+      color: antiquewhite;
     }
 
     // .left-recipe-delete {
@@ -201,14 +197,45 @@ a {
   margin-bottom: 20px;
 }
 
+#recipe-name{
+  margin-top: 15px;
+}
+.ps-3{
+  margin-top: 15px;
+}
 .fa-regular {
-  color: darkblue;
+  color: rgb(0, 0, 0);
 }
 
 .fa-book-open {
-  color: darkblue;
+  color: rgb(0, 0, 0);
 }
 
 .fa-clock{
-  color: darkblue;
+  color: rgb(0, 0, 0);
+}
+
+.form-label{
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.text-light {
+    --bs-text-opacity: 1;
+    color: antiquewhite !important;
+}
+.recipe-name{
+  border: solid;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    margin-right: 50px;
+    transition: 0.5s;
+    width: 85%;
+    overflow: hidden;
+    text-wrap: wrap;
+    text-align: center;
+    color: antiquewhite;
 }
