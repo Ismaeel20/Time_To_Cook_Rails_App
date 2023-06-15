@@ -20,7 +20,7 @@ img.setting{
 }
 
 .site-information {
-  background-color: #000000;
+  background-color: #000000ad;
   // opacity: 75%;
   padding: 14px;
   // margin-top: 5%;
@@ -97,6 +97,7 @@ img.setting{
 @media (min-width: 768px) {
   .cards {
     grid-template-columns: 1fr 1fr;
+    border-radius: 5px
   }
 }
 
@@ -135,4 +136,9 @@ img.setting{
 .btn-homepage:hover {
     color: #b4b4b4;;
     background-color: #87895d50 !important;
+}
+
+.home-page-text {
+  font-size: 30px !important;
+  font-weight: 300 !important;
 }

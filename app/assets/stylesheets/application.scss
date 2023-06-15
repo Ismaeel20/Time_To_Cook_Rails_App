@@ -35,6 +35,8 @@ body {
 
 .cta {
   margin-top: 131px;
+  width: 50%;
+  margin-bottom: 25px;
 }
 
 body {
@@ -60,7 +62,8 @@ a {
 
 #home-btn{
   height: 5pc !important;
-  width: 30pc  !important;
+  width: 17pc  !important;
+  margin-bottom: 1.5rem;
 }
 
  // body {
@@ -200,9 +203,23 @@ a {
 #forms{
   margin-bottom: 20px;
 }
+
 #recipe-name{
   margin-top: 10px;
 }
 .ps-3{
   margin-top: 10px;
+
+
+.fa-regular {
+  color: darkblue;
+}
+
+.fa-book-open {
+  color: darkblue;
+}
+
+.fa-clock{
+  color: darkblue;
+
 }

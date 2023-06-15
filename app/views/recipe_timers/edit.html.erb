@@ -5,7 +5,7 @@
 <div style="display: flex; justify-content: center;">
 <%= simple_form_for @recipe_timer do |f| %>
 <%= f.input :ingredient, input_html: { style: 'width: 400px' } %>
-<%= f.input :time, input_html: { style: 'width: 400px' } %>
+<%= f.input :time, label: 'Time(minutes)' input_html: { style: 'width: 400px' } %>
   <%= f.submit %>
     </div>
   <% end %>

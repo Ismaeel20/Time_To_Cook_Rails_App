@@ -1,6 +1,7 @@
 
 
-<h1>Timers</h1>
+<h1 class="m-3 display-5" >Timers</h1>
+  <h4 class="text-center p-1" >Click on a timer to start or pause the countdown!</h4>
 <div class="search">
     <%= form_with url: timers_path, method: :get, class: "d-flex" do %>
   <%= text_field_tag :query,
@@ -11,7 +12,6 @@
  <div class="search-btn m-auto"><%= submit_tag "Search", class: "btn btn-primary rounded" %></div>
 <% end %>
 </div>
-  <h4 class="text-center p-2" >Click on a timer to start or pause the countdown!</h4>
 
 <div class="container">
   <div class="timer-grid">
@@ -36,14 +36,15 @@
 
 
 
-  <div class="create" style="display: flex; justify-content: center;">
-  <%= simple_form_for @timer do |f| %>
-    <%= f.input :ingredient, input_html: { style: 'width: 350px' } %>
-    <%= f.input :time, label: 'Time(mins)', input_html: { style: 'width: 350px' } %>
-    <%= f.submit %>
-  <% end %>
-  </div>
-
   <%# <div id="defaultParamsExample">
       <div class="values"></div> %>
+  </div>
+
+  <div class="p-3 create" style="display: flex; justify-content: center;">
+  <%= simple_form_for @timer do |f| %>
+    <%= f.input :ingredient, input_html: { style: 'width: 350px' } %>
+    <%= f.input :time, label: 'Time(minutes)', input_html: { style: 'width: 350px' } %>
+    <%= f.submit %>
+
+  <% end %>
   </div>

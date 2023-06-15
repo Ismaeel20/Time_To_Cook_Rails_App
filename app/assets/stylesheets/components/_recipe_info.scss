@@ -13,7 +13,7 @@ padding: 176px;
 }
 
 .recipe-info p{
-  display: flex;
+  // display: flex;
   justify-content: space-around;
   padding: 10px;
   display: inline-block;
@@ -24,21 +24,29 @@ padding: 176px;
   color: antiquewhite !important;
 }
 
-.recipe-info {
-  border: solid;
-  border-color: white ;
-  margin-top: 20px;
-  padding: 10px;
-}
+// .recipe-info {
+//   border: solid;
+//   border-color: white ;
+//   margin-top: 20px;
+//   padding: 10px;
+// }
 
 .recipe {
   display: flex;
   justify-content: space-around;
   margin-top: 20px ;
+  border: double;
+  border-radius: 10px;
+  margin: 10px auto;
+  margin-bottom: 30px;
+  width: 75%;
+  justify-content: space-between;
 }
 
 .recipe-content {
   width: 60%;
+  margin-right: 80px;
+  padding-top: 30px;
 }
 .salmon {
   background-image: url('https://disheswithdad.com/wp-content/uploads/2020/03/lemon-dill-salmon-2.jpg');
@@ -82,6 +90,30 @@ padding: 176px;
 
 .tomato {
   background-image: url('https://www.skinnytaste.com/wp-content/uploads/2008/04/Bruschetta-4-500x375.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 300px
+}
+
+.yogurt {
+  background-image: url('https://simplyhomecooked.com/wp-content/uploads/2021/08/yogurt-parfait-4.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 300px
+}
+
+.chicken{
+  background-image: url('https://cdn.loveandlemons.com/wp-content/uploads/2023/01/grilled-cheese-sandwich.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 300px
+}
+
+.frogs {
+  background-image: url('https://www.theintrepideater.com/wp-content/uploads/2020/10/DSC_0123-1024x716.jpg');
   background-size: cover;
   background-position: center;
   width: 300px;
