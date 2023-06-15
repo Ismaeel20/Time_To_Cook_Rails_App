@@ -134,10 +134,10 @@ input[type=submit] {
   transform: translateZ(0);
   transition-duration: .3s;
   transition-property: transform;
-  border-radius: 3px !important;
   width: 9em;
   height: 3em;
   color: white;
+  border-radius: 7px;
 }
 
 input[type=submit]:hover {
