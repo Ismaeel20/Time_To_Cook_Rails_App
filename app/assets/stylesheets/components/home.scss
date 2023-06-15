@@ -29,14 +29,14 @@ img.setting{
 .site-information h2 {
   font-size: 24px;
   margin-bottom: 10px;
-  color: #ffffff;
+  color: antiquewhite;
 }
 
 .site-information p {
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 10px;
-  color: #ffffff;
+  color: antiquewhite;
 }
 
 
@@ -68,14 +68,20 @@ img.setting{
     // color: black;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url('https://img.freepik.com/premium-photo/fresh-herbs-spices-peppers-dill-parsley-black-background-place-text-culinary-concept-background-menu-recipe_114106-2324.jpg');
     background-size: cover;
+    border-radius: 7px;
+    color: antiquewhite;
 }
   #opacity-d-timers {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://images.pexels.com/photos/4082638/pexels-photo-4082638.jpeg');
     background-size: cover;
+    border-radius: 7px;
+    color: antiquewhite;
   }
   #opacity-recipes {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url('https://i.pinimg.com/originals/c1/14/c3/c114c345413eebe514d073473e96c756.jpg');
     background-size: cover;
+    border-radius: 7px;
+    color: antiquewhite;
   }
 }
 
@@ -121,7 +127,7 @@ img.setting{
   height: auto;
   font-size: x-large;
   background-color: #babe51;
-  border-radius: 23Px;
+  border-radius: 10px;
   a {
     text-decoration: none;
     color: #ffffff;
@@ -129,6 +135,7 @@ img.setting{
     justify-content: space-around;
     margin-top: 1px;
     font-size: 43px;
+    // padding: 2px;
   }
 
 }
@@ -139,6 +146,12 @@ img.setting{
 }
 
 .home-page-text {
+  font-size: 30px !important;
+  font-weight: 300 !important;
+  color: antiquewhite;
+}
+
+.home-cards-text {
   font-size: 30px !important;
   font-weight: 300 !important;
 }
