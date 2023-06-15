@@ -1,0 +1,43 @@
+
+// .btn {
+//   color: antiquewhite;
+//   height: 5pc;
+//   width: 30pc;
+// }
+
+.btn-primary {
+  color: white;
+  &:hover{
+    color: white;
+    opacity: 70%;
+  }
+}
+
+
+// .button-for-search {
+//   border-radius: 3px !important;
+// }
+
+
+.btn-homepage {
+  width: auto;
+  height: auto;
+  font-size: x-large;
+  background-color: #babe51;
+  border-radius: 10px;
+  a {
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1px;
+    font-size: 43px;
+    // padding: 2px;
+  }
+
+}
+
+.btn-homepage:hover {
+    color: #b4b4b4;;
+    background-color: #87895d50 !important;
+}
