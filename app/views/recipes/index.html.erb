@@ -43,9 +43,12 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <%= simple_form_for @new_recipe, html: { class: "narrow-form" } do |f|  %>
-        <%= f.input :name %>
-        <%= f.submit "Add Recipe"  %>
+        <%= simple_form_for @new_recipe do |f|  %>
+          <%= f.input :name %>
+          <div class="d-flex justify-content-center">
+            <%= f.submit "Add Recipe", class: "btn btn-primary"  %>
+          </div>
+
         <% end %>
       </div>
       <%# <div class="modal-footer"> %>
