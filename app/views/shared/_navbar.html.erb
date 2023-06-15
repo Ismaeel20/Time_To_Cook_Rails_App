@@ -7,9 +7,9 @@
     <% end %>
 
     <div class="d-flex w-4 justify-content-between" style="width: 900px; font-size: 25px">
-     <div class="nav-bar-links"> <%= link_to "Default Timers", timers_path %> </div>
-     <div class="nav-bar-links"> <%= link_to "My Timers", recipes_path %> </div>
-     <div class="nav-bar-links"> <%= link_to "Recipe Information", recipe_info_path %> </div>
+     <div class="nav-bar-links"> <%= link_to "Quick Timers", timers_path %> <i class="fa-regular fa-clock"></i></div>
+     <div class="nav-bar-links"> <%= link_to "My Timers", recipes_path %> <i class="fa-solid fa-clock"></i> </div>
+     <div class="nav-bar-links"> <%= link_to "Explore Recipes", recipe_info_path %> <i class="fa-solid fa-book-open"></i> </div>
     </div>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +29,7 @@
           </li>
           <li class="nav-item dropdown">
           <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= image_tag "https://cdn.icon-icons.com/icons2/582/PNG/512/chef_icon-icons.com_55046.png", class: "avatar", alt: "dropdown menu" %>
+            <%= image_tag "https://media.istockphoto.com/id/1252403518/vector/vector-illustration-of-the-chef-avatar-icon.jpg?s=612x612&w=0&k=20&c=asppr7OWiM54V-YlGBuROvxrWSQ52GTjYIV9MoL2KRs=", class: "avatar", alt: "dropdown menu" %>
           </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%# <%= link_to "Action", "#", class: "dropdown-item" %>

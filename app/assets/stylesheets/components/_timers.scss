@@ -268,7 +268,7 @@ margin-bottom: 20px;
 }
 
 .timer-circle:hover, .timer-circle.active{
-  color: rgb(64, 234, 160);
+  color: rgb(37, 146, 68);
   border: 16px solid #95984b;
   cursor: pointer;
 }
@@ -343,4 +343,13 @@ div.search{
   align-items: center;
   justify-content: center;
   font-size: 30px;
+}
+
+.button-for-search {
+  border-radius: 3px !important;
+}
+
+.click-on-info {
+  margin-top: -40px;
+  padding: 23px;
 }
