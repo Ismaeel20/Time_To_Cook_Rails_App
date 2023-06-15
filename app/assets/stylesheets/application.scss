@@ -122,6 +122,9 @@ a {
 
     .reset-button {
       border-radius: 100%;
+      background: none;
+      border: none;
+      color: antiquewhite;
     }
 
     // .left-recipe-delete {
@@ -196,4 +199,10 @@ a {
 // }
 #forms{
   margin-bottom: 20px;
+}
+#recipe-name{
+  margin-top: 10px;
+}
+.ps-3{
+  margin-top: 10px;
 }
